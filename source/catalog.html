@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
       <header class="page-header">
@@ -32,17 +33,19 @@
           </ul>
         </nav>
       </header>
-      <main class="page-main catalog-main">
-        <div class="catalog-main__header-container">
-          <h1 class="catalog-main__header">Фотографии пользователей</h1>
+      <main class="page-main">
+        <div class="page-main__header-container">
+          <h1 class="page-main__header">Фотографии пользователей</h1>
         </div>
-        <p class="catalog-main__slogan slogan">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
-        <section class="catalog-main__gallery gallery">
+        <div class="page-main__slogan-container">
+          <p class="page-main__slogan slogan">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
+        </div>
+        <section class="page-main__gallery gallery">
           <h2 class="visually-hidden">Галерея фотографий</h2>
           <ul class="gallery__list">
             <li class="gallery__item">
-              <a class="gallery__link" href="#">
-                <img class="gallery__image gallery__image--panorama-of-day" src="../source/img/catalog/panorama.jpg" alt="Мост над оврагом.">
+              <a class="gallery__link gallery__link--panorama-of-day" href="#">
+                <img class="gallery__image" src="../img/catalog/panorama.jpg" alt="Мост над оврагом.">
               </a>
               <div class="gallery__container">
                 <div class="gallery__content-container">
@@ -64,7 +67,7 @@
             </li>
             <li class="gallery__item">
               <a class="gallery__link" href="#">
-                <img class="gallery__image" src="../source/img/catalog/photo-1.jpg" alt="Фотосъемка машины.">
+                <img class="gallery__image" src="../img/catalog/photo-1.jpg" alt="Фотосъемка машины.">
               </a>
               <div class="gallery__container">
                 <div class="gallery__content-container">
@@ -83,7 +86,7 @@
             </li>
             <li class="gallery__item">
               <a class="gallery__link" href="#">
-                <img class="gallery__image" src="../source/img/catalog/photo-2.jpg" alt="Барабаны.">
+                <img class="gallery__image" src="../img/catalog/photo-2.jpg" alt="Барабаны.">
               </a>
               <div class="gallery__container">
                 <div class="gallery__content-container">
@@ -102,7 +105,7 @@
             </li>
             <li class="gallery__item">
               <a class="gallery__link" href="#">
-                <img class="gallery__image" src="../source/img/catalog/photo-3.jpg" alt="Панорамные окна, через которые выдны облака">
+                <img class="gallery__image" src="../img/catalog/photo-3.jpg" alt="Панорамные окна, через которые выдны облака">
               </a>
               <div class="gallery__container">
                 <div class="gallery__content-container">
@@ -121,7 +124,7 @@
             </li>
             <li class="gallery__item">
               <a class="gallery__link" href="#">
-                <img class="gallery__image" src="../source/img/catalog/photo-4.jpg" alt="Ярмарка Кубанская Бахча.">
+                <img class="gallery__image" src="../img/catalog/photo-4.jpg" alt="Ярмарка Кубанская Бахча.">
               </a>
               <div class="gallery__container">
                 <div class="gallery__content-container">
@@ -140,7 +143,7 @@
             </li>
             <li class="gallery__item">
               <a class="gallery__link" href="#">
-                <img class="gallery__image" src="../source/img/catalog/photo-5.jpg" alt="Ноги на фоне обрыва, покрытого травой.">
+                <img class="gallery__image" src="../img/catalog/photo-5.jpg" alt="Ноги на фоне обрыва, покрытого травой.">
               </a>
               <div class="gallery__container">
                 <div class="gallery__content-container">
@@ -159,15 +162,13 @@
             </li>
             <li class="gallery__item">
               <a class="gallery__link" href="#">
-                <img class="gallery__image" src="../source/img/catalog/photo-6.jpg" alt="Крыло самолета на фоне солнца.">
+                <img class="gallery__image" src="../img/catalog/photo-6.jpg" alt="Крыло самолета на фоне солнца.">
               </a>
               <div class="gallery__container">
-                <div class="gallery__content-container">
                   <p class="gallery__info">
                     <span class="gallery__author-name">Надежда</span> (<span class="gallery__meta-time">45 часов</span> назад)
                   </p>
                   <p class="gallery__content">Всем GM и взаимные лайки!</p>
-                </div>
                 <div class="gallery__likes-container">
                   <button class="gallery__like-button like-button"></button>
                   <p class="gallery__likes">
@@ -178,12 +179,12 @@
             </li>
           </ul>
         </section>
-        <section class="catalog-main__user-photo user-photo">
+        <section class="page-main__user-photo user-photo">
           <h2 class="visually-hidden">Ваша фотография</h2>
           <p class="user-photo__slogan slogan">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>
           <div class="user-photo__container">
             <div class="user-photo__image-container">
-              <img class="user-photo__image" src="../source/img/catalog/photo-7.jpg" alt="Дорога в зимнем лесу.">
+              <img class="user-photo__image" src="../img/catalog/photo-7.jpg" alt="Дорога в зимнем лесу.">
             </div>
             <form class="user-photo__tools-container" action="https://echo.htmlacademy.ru" method="post">
               <label class="user-photo__icon user-photo__icon--crop" for="crop">
@@ -199,8 +200,8 @@
               </label>
               <input class="user-photo__tool user-photo__tool--contrast" type="range" name="contrast" id="contrast">
               <p class="user-photo__buttons">
-                <button class="user-photo__post-button" type="submit">Запостить</button>
-                <button class="user-photo__reset-button" type="reset">Отмена</button>
+                <button class="user-photo__button user-photo__button--post" type="submit">Запостить</button>
+                <button class="user-photo__button user-photo__button--reset" type="reset">Отмена</button>
               </p>
             </form>
           </div>

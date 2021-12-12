@@ -2,9 +2,39 @@
   background-color: @minor-bg-color;
 }
 
+.tariffs__container {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
 .tariffs-list__header {
   background-color: @table-bg-color;
   color: @contrast-font-color;
+}
+
+.tariffs__table-container {
+  overflow-x: hidden;
+}
+
+.tariffs__table {
+  width: 840px;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  @media (min-width: @tablet-width) {
+    width: 620px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 940px;
+  }
+}
+
+.tariffs-list__dummy {
+  @media (max-width: @tablet-width) {
+    display: none;
+  }
 }
 
 .tariffs-list__name {
@@ -19,4 +49,24 @@
 
 .tariffs-list__filters {
   background-color: @main-bg-color;
+}
+
+.tariffs-list__filters-content {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.tariffs-list__filters--big-screen {
+  background-color: @main-bg-color;
+
+  @media (max-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.tariffs__toggles {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }

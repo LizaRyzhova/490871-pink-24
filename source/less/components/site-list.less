@@ -1,10 +1,28 @@
 .site-list {
   margin: 0;
   padding: 0;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    width: 655px;
+    flex-wrap: wrap;
+  }
 }
 
 .site-list__item {
   list-style-type: none;
+  padding: 25px;
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    margin-right: 79px;
+  }
+}
+
+.site-list__item:nth-child(4n) {
+  @media (min-width: @desktop-width) {
+    margin-right: 0;
+  }
 }
 
 .site-list__link {

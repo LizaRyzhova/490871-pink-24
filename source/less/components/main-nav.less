@@ -1,5 +1,17 @@
 .main-nav__toggle {
+  position: absolute;
+  right: 20px;
+  top: 23px;
+
   @media (min-width: @desktop-width) {
     display: none;
+  }
+}
+
+.main-nav__list {
+  @media (max-width: @desktop-width) {
+    position: absolute;
+    width: 100%;
+    background-color: @main-font-color;
   }
 }

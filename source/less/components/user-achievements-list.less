@@ -1,0 +1,27 @@
+.user-achievements-list {
+  list-style-type: none;
+  font-size: 18px;
+  line-height: 30px;
+  margin: 0;
+  padding: 0;
+  text-align: start;
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 280px 280px 280px;
+    grid-column-gap: 20px;
+  }
+}
+
+.user-achievements-list__item {
+  padding-left: 60px;
+  margin-bottom: 70px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 117px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 55px;
+  }
+}

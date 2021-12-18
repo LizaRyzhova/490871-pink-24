@@ -1,5 +1,23 @@
 .popup {
-  padding-top: 44px;
+  display: none;
+  position: absolute;
+  background-color: @main-bg-color;
+  top: 50%;
+  width: 100%;
+
+  &--open {
+    display: block;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 460px;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 780px;
+  }
 }
 
 .popup__title {
@@ -14,5 +32,15 @@
 
 .popup__button-container {
   padding: 50px 20px;
-  background-color: @minor-bg-color;
+  background-color: @main-bg-color;
+
+  &--failure {
+    @media (min-width: @desktop-width) {
+      background-color: @minor-bg-color;
+    }
+  }
+
+  &--success {
+    background-color: @minor-bg-color;
+  }
 }

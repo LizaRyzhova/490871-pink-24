@@ -39,24 +39,24 @@
           <h1 class="page-main__header">Конкурс на самое безбашенное путешествие с Пинк</h1>
         </div>
         <div class="page-main__slogan-container">
-          <p class="page-main__slogan slogan">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
+          <p class="page-main__slogan slogan">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!<span class="slogan--tablet">Пожалуйста, заполните форму ниже:</span></p>
         </div>
         <section class="page-main__fields user-fields">
           <h2 class="visually-hidden">Форма пользователя</h2>
           <form class="user-fields__form user-form" action="https://echo.htmlacademy.ru" method="post">
             <fieldset class="user-form__fieldset user-form__fieldset--full-name">
               <legend class="visually-hidden">Ваше полное имя</legend>
-              <p class="user-form__user-paragraph user-paragraph">
-                <label class="user-paragraph__label user-paragraph__label--surname" for="surname">ФАМИЛИЯ:</label>
-                <input class="user-paragraph__field user-paragraph__field--surname" type="text" id="surname" name="surname" placeholder="Укажите фамилию *" required>
+              <p class="user-form__user-paragraph user-paragraph user-paragraph--full-name">
+                <label class="user-paragraph__label user-paragraph__label--full-name" for="surname">ФАМИЛИЯ:</label>
+                <input class="user-paragraph__field user-paragraph__field--full-name" type="text" id="surname" name="surname" placeholder="Укажите фамилию *" required>
               </p>
-              <p class="user-form__user-paragraph user-paragraph">
-                <label class="user-paragraph__label user-paragraph__label--name" for="name">ИМЯ:</label>
-                <input class="user-paragraph__field user-paragraph__field--name" type="text" id="name" name="name" placeholder="Введите ваше имя *" required>
+              <p class="user-form__user-paragraph user-paragraph user-paragraph--full-name">
+                <label class="user-paragraph__label user-paragraph__label--full-name" for="name">ИМЯ:</label>
+                <input class="user-paragraph__field user-paragraph__field--full-name" type="text" id="name" name="name" placeholder="Введите ваше имя *" required>
               </p>
-              <p class="user-form__user-paragraph user-paragraph">
-                <label class="user-paragraph__label user-paragraph__label--patronymic" for="patronymic">ОТЧЕСТВО:</label>
-                <input class="user-paragraph__field user-paragraph__field--patronymic" type="text" id="patronymic" name="patronymic" placeholder="Ну и отчество тоже">
+              <p class="user-form__user-paragraph user-paragraph user-paragraph--full-name">
+                <label class="user-paragraph__label user-paragraph__label--full-name" for="patronymic">ОТЧЕСТВО:</label>
+                <input class="user-paragraph__field user-paragraph__field--full-name" type="text" id="patronymic" name="patronymic" placeholder="Ну и отчество тоже">
               </p>
             </fieldset>
             <fieldset class="user-form__fieldset user-form__fieldset--achievements">
@@ -107,13 +107,13 @@
               </ul>
             </fieldset>
             <fieldset class="user-form__fieldset user-form__fieldset--contacts">
-              <legend class="visually-hidden">Ваши контакты</legend>
+              <legend class="user-form__title user-form__title--hidden">контактная информация</legend>
               <p class="user-form__user-paragraph user-paragraph">
-                <label class="user-paragraph__label user-paragraph__label--telephone" for="telephone">НОМЕР ТЕЛЕФОНА</label>
-                <input class="user-paragraph__field user-paragraph__field--email" type="tel" id="telephone" name="telephone" placeholder="Номер, пожалуйста">
+                <label class="user-paragraph__label user-paragraph__label--contacts" for="telephone">НОМЕР ТЕЛЕФОНА</label>
+                <input class="user-paragraph__field user-paragraph__field--telephone" type="tel" id="telephone" name="telephone" placeholder="Номер, пожалуйста">
               </p>
               <p class="user-form__user-paragraph user-paragraph">
-                <label class="user-paragraph__label user-paragraph__label--email" for="email">АДРЕС ПОЧТЫ</label>
+                <label class="user-paragraph__label user-paragraph__label--contacts" for="email">АДРЕС ПОЧТЫ</label>
                 <input class="user-paragraph__field user-paragraph__field--email" type="email" id="email" name="email" placeholder="Введите почту *" required>
               </p>
             </fieldset>
@@ -146,32 +146,34 @@
             <fieldset class="user-form__fieldset user-form__fieldset--comment">
               <legend class="user-form__title user-form__title--comment">ОПИШИТЕ СВОИ ЭМОЦИИ</legend>
               <p class="user-form__comment-container">
-                <textarea class="user-form__comment-field" name="user-comment" cols="30" rows="10" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+                <textarea class="user-form__comment-field" name="user-comment" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
               </p>
             </fieldset>
-            <button class="user-form__submit-button button" type="submit">Отправить форму</button>
+            <div class="user-form__container">
+              <button class="user-form__submit-button button" type="submit">Отправить форму</button>
+              <p class="user-form__remark"><span class="user-fields__remark-sign">*</span> — обязательные поля</p>
+            </div>
 
-            <div class="popup popup--failure">
+            <div class=" popup popup--failure">
               <h3 class="popup__title popup__title--failure">Что-то пошло не так!</h3>
               <p class="popup__content popup__content--failure">Проверьте поля, выделенные красным,
                 скорее всего вы забыли их заполнить</p>
-              <div class="popup__button-container">
+              <div class="popup__button-container popup__button-container--failure">
                 <button class="popup__failure-button button" type="button">ОК</button>
               </div>
             </div>
 
-            <div class="popup popup--success">
+            <div class="popup popup--success popup--open">
               <h3 class="popup__title popup__title--success">Ваша заявка отправлена</h3>
               <p class="popup__content popup__content--success">Спасибо за ваше участие, ваша заявка
                 уже поступила к нам. В ближайшее
                 время мы рассмотрим ее и
                 оповестим вас.</p>
-              <div class="popup__button-container">
+              <div class="popup__button-container popup__button-container--success">
                 <button class="popup__success-button button">ЗАКРЫТЬ ОКНО</button>
               </div>
             </div>
           </form>
-          <p class="user-fields__remark"><span class="user-fields__remark-sign">*</span> — обязательные поля</p>
         </section>
       </main>
       <footer class="page-footer">

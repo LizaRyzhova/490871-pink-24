@@ -4,18 +4,19 @@
 
   @media (min-width: @desktop-width) {
     display: flex;
-    width: 655px;
+    width: 620px;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
 
 .site-list__item {
   list-style-type: none;
-  padding: 25px;
+  padding: 0;
 
   @media (min-width: @desktop-width) {
     padding: 0;
-    margin-right: 79px;
+    margin-right: 0;
   }
 }
 
@@ -26,9 +27,47 @@
 }
 
 .site-list__link {
+  display: block;
+  padding: 16px 25px;
   color: inherit;
   text-decoration: none;
   font-size: 18px;
   line-height: 32px;
   font-weight: bold;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  border-bottom: 1px solid #000000;
+  position: relative;
+
+  @media (min-width: @desktop-width) {
+    border: none;
+    padding: 39px 0;
+  }
+
+  &:hover {
+    color: @contacts-link-color;
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    @media (min-width: @desktop-width) {
+      color: inherit;
+    }
+  }
+
+  &--current::before {
+    display: none;
+
+    @media (min-width: @desktop-width) {
+      display: block;
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: @main-bg-color;
+    }
+  }
 }
+

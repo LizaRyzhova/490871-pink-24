@@ -15,3 +15,25 @@ img {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.line-break {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.button {
+  &:hover {
+    background-color: #1c9b5e;
+  }
+
+  &:active {
+    background-color: #1c9b5e;
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:disabled {
+    background-color: #e5e5e5;
+    color: rgba(255, 255, 255, 1);
+  }
+}

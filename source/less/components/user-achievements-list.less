@@ -1,21 +1,22 @@
 .user-achievements-list {
   list-style-type: none;
   font-size: 18px;
-  line-height: 30px;
-  margin: 0;
   padding: 0;
   text-align: start;
 
   @media (min-width: @desktop-width) {
     display: grid;
-    grid-template-columns: 280px 280px 280px;
-    grid-column-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
 .user-achievements-list__item {
-  padding-left: 60px;
   margin-bottom: 70px;
+
+  &:last-child {
+    margin-bottom: 55px;
+    order: 6;
+  }
 
   @media (min-width: @tablet-width) {
     padding-left: 117px;
@@ -24,4 +25,57 @@
   @media (min-width: @desktop-width) {
     padding-left: 55px;
   }
+
+  &:nth-child(2) {
+    order: 4;
+  }
+
+  &:nth-child(3) {
+    order: 2;
+  }
+
+  &:nth-child(4) {
+    order: 5;
+  }
+
+  &:nth-child(5) {
+    order: 3;
+  }
+}
+
+.user-achievements-list__label {
+  padding-left: 57px;
+  line-height: 35px;
+  position: relative;
+  display: block;
+}
+
+.user-achievements-list__mark {
+  position: absolute;
+  border: 2px solid #e5e5e5;
+  border-radius: 1px;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  width: 35px;
+  height: 35px;
+  background-color: @main-bg-color;
+}
+
+.user-achievements-list__label:hover .user-achievements-list__mark {
+  border: 2px solid #283645;
+}
+
+.user-achievements-list__label:active .user-achievements-list__mark {
+  border: 2px solid @contacts-link-color;
+}
+
+.user-achievements-list__control[type="checkbox"]:checked + .user-achievements-list__mark::before {
+  position: absolute;
+  top: 7px;
+  left: 5px;
+  width: 22px;
+  height: 16px;
+  background-image: url("../img/tick.svg");
+  content: "";
 }

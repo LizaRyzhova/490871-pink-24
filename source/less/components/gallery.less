@@ -52,11 +52,13 @@
 
   @media (min-width: @tablet-width) {
     margin: 0;
+    width: 300px;
   }
 }
 
 .gallery__link--panorama-of-day {
   margin: 0;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     margin: 0 -20px;
@@ -65,12 +67,53 @@
   @media (min-width: @desktop-width) {
     margin: 0 -130px;
   }
+
+  &::after {
+    content: "ПАНОРАМА ДНЯ";
+    position: absolute;
+    width: 140px;
+    height: 36px;
+    top: 0;
+    right: 20px;
+    background-color: @contacts-link-color;
+    color: @contrast-font-color;
+    font-size: 12px;
+    line-height: 36px;
+    font-weight: 700;
+
+    @media (min-width: @tablet-width) {
+      top: 57px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 54px;
+      right: 130px;
+    }
+  }
 }
 
 .gallery__image {
   width: 100%;
   height: auto;
   display: block;
+
+  @media (min-width: @tablet-width) {
+    height: 300px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 400px;
+  }
+
+  &--panorama-of-day {
+    @media (min-width: @tablet-width) {
+      min-height: 509px;
+    }
+
+    @media (min-width: @desktop-width) {
+      min-height: 506px;
+    }
+  }
 }
 
 .gallery__container {
@@ -85,7 +128,29 @@
 
   @media (min-width: @tablet-width) {
     margin: 0;
+    min-height: 155px;
     height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+    padding-right: 30px;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  &--panorama-of-day {
+    @media (min-width: @tablet-width) {
+      min-height: 121px;
+    }
+
+    @media (min-width: @desktop-width) {
+      min-height: 96px;
+    }
   }
 }
 
@@ -94,16 +159,57 @@
   line-height: 24px;
   font-weight: 300;
   margin: 0;
+
+  &--panorama-of-day {
+    @media (min-width: @tablet-width) {
+      padding-right: 160px;
+    }
+  }
 }
 
 .gallery__author-name {
   font-weight: 700;
   line-height: 24px;
+  font-size: 14px;
 }
 
 .gallery__content {
   line-height: 24px;
   margin: 0;
+  margin-bottom: 25px;
+
+  @media (min-width: @tablet-width) {
+    padding-right: 40px;
+    margin-bottom: 0;
+  }
+}
+
+.gallery__likes-container {
+  display: flex;
+  margin-top: auto;
+
+  &--panorama-of-day {
+    @media (min-width: @tablet-width) {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+    }
+  }
+}
+
+.gallery__like-button {
+  margin-right: 18px;
+  padding: 0;
+  border: none;
+
+  @media (min-width: @tablet-width) {
+    order: 2;
+    margin-right: 0;
+  }
+}
+
+.gallery__like-img {
+  display: block;
 }
 
 .gallery__likes {
@@ -111,4 +217,15 @@
   line-height: 24px;
   color: @contacts-link-color;
   margin: 0;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    margin-right: auto;
+  }
+
+  &--panorama-of-day {
+    @media (min-width: @tablet-width) {
+      margin-right: 16px;
+    }
+  }
 }

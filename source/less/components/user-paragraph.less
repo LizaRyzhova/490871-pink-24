@@ -4,6 +4,11 @@
   align-items: flex-start;
   margin: 0;
   margin-bottom: 30px;
+  position: relative;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 
   @media (min-width: @tablet-width) {
     margin: 0;
@@ -14,6 +19,39 @@
       flex-direction: row;
       margin: 0;
       margin-bottom: 56px;
+      align-items: center;
+    }
+  }
+
+  &--telephone::after {
+    @media (min-width: @tablet-width) {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 0;
+      right: 0;
+      width: 55px;
+      height: 55px;
+      background-color: #e5e5e5;
+      background-image: url("../img/phone.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &--email::after {
+    @media (min-width: @tablet-width) {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 0;
+      right: 0;
+      width: 55px;
+      height: 55px;
+      background-color: #e5e5e5;
+      background-image: url("../img/mail.svg");
+      background-position: center;
+      background-repeat: no-repeat;
     }
   }
 }
@@ -35,6 +73,7 @@
     @media (min-width: @tablet-width) {
       margin: 0;
       margin-top: 22px;
+      margin-left: 20px;
       order: 2;
     }
   }
@@ -45,8 +84,26 @@
   color: @main-font-color;
   width: 100%;
   box-sizing: border-box;
+  padding: 15px 22px;
+  border: 2px solid #e5e5e5;
+  border-radius: 1px;
+  position: relative;
 
   @media (min-width: @desktop-width) {
     width: 370px;
+  }
+
+  &--full-name {
+    @media (min-width: @desktop-width) {
+      width: 100%;
+    }
+  }
+
+  &:hover {
+    border: 2px solid #283645;
+  }
+
+  &:active {
+    border: 2px solid @contacts-link-color;
   }
 }

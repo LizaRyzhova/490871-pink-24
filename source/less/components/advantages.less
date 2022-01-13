@@ -65,11 +65,48 @@
   padding-bottom: 325px;
   padding-top: 19px;
   background-color: @minor-bg-color;
-  background-image: url("../img/mobile.png");
+  background-image: url("../img/mobile-1.png");
   background-size: 157px auto;
-  background-position: bottom center;
+  background-position: bottom -43px center;
   background-repeat: no-repeat;
   position: relative;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/mobile-1@2x.png");
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 20px;
+    padding-left: 310px;
+    padding-top: 20px;
+    background-image: none;
+
+    &::after {
+      display: block;
+      content: "";
+      width: 268px;
+      height: 480px;
+      background-image: url("../img/mobile-1-tablet.png");
+      position: absolute;
+      bottom: 0;
+      left: 20px;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/mobile-1-tablet@2x.png");
+      }
+
+      @media (min-width: @desktop-width) {
+        display: none;
+      }
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 154px;
+    padding-right: 154px;
+  }
 
   &::before {
     display: block;
@@ -89,35 +126,6 @@
     @media (min-width: @desktop-width) {
       height: 100px;
     }
-  }
-
-  @media (min-width: @tablet-width) {
-    padding-bottom: 20px;
-    padding-left: 310px;
-    padding-top: 20px;
-    background-image: none;
-
-    &::after {
-      display: block;
-      content: "";
-      width: 268px;
-      height: 480px;
-      background-image: url("../img/mobile.png");
-      position: absolute;
-      bottom: 0;
-      left: 20px;
-      background-repeat: no-repeat;
-      background-size: cover;
-
-      @media (min-width: @desktop-width) {
-        display: none;
-      }
-    }
-  }
-
-  @media (min-width: @desktop-width) {
-    padding-left: 154px;
-    padding-right: 154px;
   }
 }
 
@@ -151,16 +159,15 @@
     overflow: visible;
 
     &::before {
-      top: 180px;
-      left: -50px;
+      top: 174px;
+      left: -20px;
       display: block;
       content: "";
       position: absolute;
       width: 300px;
       height: 17px;
-      background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #000000 49.8%, rgba(0, 0, 0, 0) 93.23%);
-      opacity: 0.3;
-      filter: blur(4px);
+      background-image: url("../img/shadow.svg");
+      background-position: bottom -12px center;
     }
 
     &::after {
@@ -173,20 +180,32 @@
       left: 50%;
       transform: translateX(-50%);
       background-size: 186px auto;
-      background-position: bottom center;
+      background-position: bottom -82px center;
       background-repeat: no-repeat;
     }
 
     &:first-child::after {
-      background-image: url("../img/mobile-2.png");
+      background-image: url("../img/mobile-2-desktop.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/mobile-2-desktop@2x.png");
+      }
     }
 
     &:nth-child(2)::after {
-      background-image: url("../img/mobile-3.png");
+      background-image: url("../img/mobile-3-desktop.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/mobile-3-desktop@2x.png");
+      }
     }
 
     &:last-child::after {
-      background-image: url("../img/mobile-4.png");
+      background-image: url("../img/mobile-1-desktop.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/mobile-1-desktop@2x.png");
+      }
     }
   }
 }

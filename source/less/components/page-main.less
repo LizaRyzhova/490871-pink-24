@@ -1,5 +1,5 @@
 .page-main__header-container {
-  background-image: url("../img/inner-background.jpg");
+  background-image: url("../img/inner-background/inner-background-mobile.jpg");
   background-size: 100% auto;
   background-color: #283645;
   min-height: 237px;
@@ -8,16 +8,30 @@
   padding-left: 46px;
   padding-right: 46px;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/inner-background/inner-background-mobile@2x.jpg");
+  }
+
   @media (min-width: @tablet-width) {
     min-height: 440px;
+    background-image: url("../img/inner-background/inner-background-tablet.jpg");
     padding-left: 85px;
     padding-right: 85px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/inner-background/inner-background-tablet@2x.jpg");
+    }
   }
 
   @media (min-width: @desktop-width) {
     min-height: 394px;
+    background-image: url("../img/inner-background/inner-background-desktop.jpg");
     padding-left: 225px;
     padding-right: 225px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/inner-background/inner-background-desktop@2x.jpg");
+    }
   }
 }
 

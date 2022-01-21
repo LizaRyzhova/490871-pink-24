@@ -11,15 +11,19 @@
 }
 
 .user-achievements-list__item {
-  margin-bottom: 70px;
+  margin-bottom: 47px;
 
   &:last-child {
-    margin-bottom: 55px;
+    margin-bottom: 44px;
     order: 6;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 50px;
+    }
   }
 
   @media (min-width: @tablet-width) {
-    padding-left: 117px;
+    padding-left: 60px;
   }
 
   @media (min-width: @desktop-width) {

@@ -5,18 +5,18 @@
 }
 
 .advantages__slogan-container {
-  padding-top: 46px;
-  margin-bottom: 40px;
+  padding-top: 40px;
+  margin-bottom: 60px;
   background-color: @main-bg-color;
 
   @media (min-width: @tablet-width) {
-    padding-top: 58px;
-    margin-bottom: 64px;
+    padding-top: 47px;
+    margin-bottom: 78px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 77px;
-    padding-bottom: 66px;
+    padding-top: 60px;
+    padding-bottom: 75px;
   }
 }
 
@@ -42,7 +42,7 @@
 }
 
 .advantages__slogan:first-of-type {
-  margin-bottom: 40px;
+  margin-bottom: 29px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 0;
@@ -62,12 +62,12 @@
 .advantages__list-container {
   padding-left: 20px;
   padding-right: 20px;
-  padding-bottom: 325px;
-  padding-top: 19px;
+  padding-bottom: 317px;
+  padding-top: 52px;
   background-color: @minor-bg-color;
   background-image: url("../img/mobile-1.png");
   background-size: 157px auto;
-  background-position: bottom -43px center;
+  background-position: bottom -43px left 48%;
   background-repeat: no-repeat;
   position: relative;
 
@@ -76,9 +76,10 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 20px;
-    padding-left: 310px;
-    padding-top: 20px;
+    padding-bottom: 40px;
+    padding-left: 328px;
+    padding-top: 26px;
+    padding-right: 23px;
     background-image: none;
 
     &::after {
@@ -104,8 +105,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 154px;
-    padding-right: 154px;
+    padding-left: 165px;
+    padding-right: 165px;
   }
 
   &::before {
@@ -153,14 +154,14 @@
 
   @media (min-width: @desktop-width) {
     text-align: center;
-    padding-top: 260px;
+    padding-top: 235px;
     background-color: @minor-bg-color;
     position: relative;
     overflow: visible;
 
     &::before {
-      top: 174px;
-      left: -20px;
+      top: 164px;
+      left: -35px;
       display: block;
       content: "";
       position: absolute;
@@ -176,7 +177,7 @@
       width: 186px;
       height: 300px;
       content: "";
-      top: -110px;
+      top: -120px;
       left: 50%;
       transform: translateX(-50%);
       background-size: 186px auto;
@@ -211,10 +212,10 @@
 }
 
 .advantages__item:not(:last-child) {
-  padding-bottom: 43px;
+  padding-bottom: 30px;
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 42px;
+    padding-bottom: 34px;
   }
 
   @media (min-width: @desktop-width) {
@@ -227,15 +228,17 @@
   font-size: 18px;
   line-height: 24px;
   margin: 0;
-  margin-bottom: 24px;
+  margin-bottom: 13px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 19px;
+    margin-bottom: 13px;
   }
 
   @media (min-width: @desktop-width) {
-    max-width: 180px;
+    max-width: 230px;
     margin: 0 auto 24px;
+    font-size: 30px;
+    line-height: 30px;
   }
 }
 
@@ -244,9 +247,10 @@
   margin: 0;
 
   @media (min-width: @desktop-width) {
-    max-width: 252px;
+    max-width: 230px;
     margin: 0 auto;
     font-size: 18px;
+    line-height: 30px;
   }
 }
 
@@ -263,10 +267,9 @@
 .advantages__effect-container {
   max-width: 290px;
   margin-left: auto;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 138px;
-  padding-top: 102px;
+  padding-right: 40px;
+  padding-bottom: 118px;
+  padding-top: 97px;
   text-align: left;
   display: none;
   position: relative;
@@ -291,17 +294,17 @@
 
   @media (min-width: @desktop-width) {
     max-width: 534px;
-    padding-left: 130px;
-    padding-right: 130px;
-    padding-bottom: 120px;
-    padding-top: 174px;
+    padding-left: 55px;
+    padding-right: 168px;
+    padding-bottom: 113px;
+    padding-top: 120px;
 
     &::before {
       position: absolute;
       display: block;
       width: 298px;
       height: 345px;
-      top: 54px;
+      top: 30px;
       left: -310px;
       content: "";
       background-image: url("../img/clock.svg");
@@ -316,16 +319,22 @@
   font-size: 30px;
   line-height: 36px;
   margin: 0;
-  margin-bottom: 24px;
+  margin-bottom: 10px;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 20px;
+  }
 }
 
 .advantages__effect-description {
   margin: 0;
+  margin-bottom: 8px;
   line-height: 24px;
 
   @media (min-width: @desktop-width) {
     font-size: 18px;
     line-height: 30px;
+    margin-bottom: 30px;
   }
 }
 
@@ -336,5 +345,11 @@
   @media (min-width: @desktop-width) {
     font-size: 18px;
     line-height: 30px;
+  }
+}
+
+.advantages__line-break {
+  @media (min-width: @desktop-width) {
+    display: none;
   }
 }

@@ -8,7 +8,7 @@
   color: @contrast-font-color;
   padding-left: 20px;
   padding-right: 20px;
-  padding-bottom: 38px;
+  padding-bottom: 32px;
   display: flex;
   flex-direction: column;
 
@@ -17,7 +17,7 @@
   }
 
   @media (min-width: @tablet-width) {
-    min-height: 690px;
+    min-height: 697px;
     background-image: url("../img/app-download-background/app-download-background-tablet.jpg");
     justify-content: center;
     align-items: flex-start;
@@ -29,10 +29,12 @@
   }
 
   @media (min-width: @desktop-width) {
-    min-height: 850px;
+    min-height: 853px;
     background-image: url("../img/app-download-background/app-download-background-desktop.jpg");
     padding-left: 130px;
     padding-right: 130px;
+    box-sizing: border-box;
+    justify-content: start;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/app-download-background/app-download-background-desktop@2x.jpg");
@@ -41,18 +43,21 @@
 }
 
 .app-download__slogan-container {
-  margin-top: 95px;
-  margin-bottom: 350px;
+  margin-top: 90px;
+  margin-bottom: 341px;
 
   @media (min-width: @tablet-width) {
     width: 200px;
     padding-left: 50px;
-    margin-bottom: 39px;
+    margin-bottom: 28px;
+    margin-top: 127px;
   }
 
   @media (min-width: @desktop-width) {
     width: 300px;
     padding-left: 0;
+    margin-bottom: 35px;
+    margin-top: 210px;
   }
 }
 
@@ -90,19 +95,21 @@
   font-size: 18px;
   line-height: 18px;
   font-weight: 700;
-  margin-bottom: 38px;
-  padding: 18px 35px;
+  margin-bottom: 35px;
+  padding: 16px 35px;
   border: 3px solid #ffffff;
   box-sizing: border-box;
   border-radius: 29px;
 
   @media (min-width: @tablet-width) {
     padding: 15px 45px;
+    margin-bottom: 46px;
   }
 
   @media (min-width: @desktop-width) {
     padding: 16px 28px;
     font-size: 21px;
+    margin-bottom: 70px;
   }
 
   &:hover {
@@ -123,5 +130,18 @@
 
   @media (min-width: @tablet-width) {
     font-size: 18px;
+  }
+}
+
+.app-download__list {
+  margin: 0;
+  margin-bottom: 18px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 35px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 50px;
   }
 }

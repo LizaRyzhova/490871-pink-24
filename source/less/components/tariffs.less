@@ -24,15 +24,17 @@
 }
 
 .tariffs__container {
-  padding-top: 70px;
+  padding-top: 80px;
   padding-bottom: 50px;
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 70px;
+    padding-top: 53px;
+    padding-bottom: 69px;
   }
 
-  @media (min-width: @tablet-width) {
-    padding-bottom: 98px;
+  @media (min-width: @desktop-width) {
+    padding-top: 55px;
+    padding-bottom: 93px;
   }
 }
 
@@ -79,8 +81,8 @@
       font-weight: 400;
 
       @media (min-width: @tablet-width) {
-        top: 2px;
-        left: 2px;
+        top: 4px;
+        left: 0;
       }
 
       @media (min-width: @desktop-width) {
@@ -112,7 +114,7 @@
 }
 
 .tariffs-list__dummy {
-  @media (max-width: @tablet-width) {
+  @media (max-width: 659px) {
     display: none;
   }
 }
@@ -125,21 +127,23 @@
 
   @media (min-width: @desktop-width) {
     font-size: 18px;
+    margin-top: 13px;
   }
 }
 
 .tariffs-list__price {
   margin-top: 0;
-  margin-bottom: 22px;
+  margin-bottom: 24px;
   font-size: 18px;
   font-weight: 300;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 16px;
+    margin-bottom: 7px;
   }
 
   @media (min-width: @desktop-width) {
     font-size: 24px;
+    margin-bottom: 23px;
   }
 }
 
@@ -186,20 +190,24 @@
 .tariffs-list__filters--big-screen {
   background-color: @main-bg-color;
 
-  @media (max-width: @tablet-width) {
+  @media (max-width: 659px) {
     display: none;
   }
 
   @media (min-width: @tablet-width) {
-    padding: 8px 15px;
+    padding: 8px 15px 6px;
     text-align: left;
     width: 153px;
     box-sizing: border-box;
   }
+
+  @media (min-width: @desktop-width) {
+    padding: 12px 19px 17px;
+  }
 }
 
 .tariffs__toggles {
-  margin-top: 45px;
+  margin-top: 40px;
   margin-bottom: 0;
 
   @media (min-width: @tablet-width) {

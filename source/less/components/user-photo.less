@@ -5,14 +5,14 @@
 }
 
 .user-photo__slogan {
-  margin: 49px 20px 52px 20px;
+  margin: 47px 20px 40px 20px;
 
   @media (min-width: @tablet-width) {
-    margin: 73px 20px 78px 20px;
+    margin: 65px 20px 69px 20px;
   }
 
   @media (min-width: @desktop-width) {
-    margin: 67px 20px 75px 20px;
+    margin: 63px 20px 66px 20px;
   }
 }
 
@@ -27,7 +27,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 50px 60px 50px 80px;
+    padding: 57px 76px 57px 80px;
     width: 940px;
     margin: 0 auto;
     box-sizing: border-box;
@@ -95,35 +95,35 @@
     height: auto;
 
     &--crop {
-      left: 22px;
+      left: 18px;
       top: 0;
       transform: translateY(-50%);
     }
 
     &--fill {
-      left: 22px;
+      left: 18px;
       top: 50%;
       transform: translateY(-50%);
     }
 
     &--contrast {
-      right: 234px;
-      top: 100%;
+      right: 239px;
+      top: 98%;
       transform: translateY(-50%);
     }
   }
 
   @media (min-width: @desktop-width) {
     &--crop {
-      left: 36px;
+      left: 30px;
     }
 
     &--fill {
-      left: 36px;
+      left: 30px;
     }
 
     &--contrast {
-      right: 336px;
+      right: 342px;
     }
   }
 }
@@ -189,7 +189,7 @@
 }
 
 .user-photo__icon:not(.user-photo__icon--current):hover .user-photo__img {
-  @media (max-width: @tablet-width) {
+  @media (max-width: 659px) {
     fill: rgba(40, 54, 69, 0.5);
   }
 }
@@ -292,7 +292,7 @@
 .user-photo__buttons {
   display: flex;
   flex-direction: column;
-  padding-top: 40px;
+  padding-top: 36px;
   margin: 0;
 
   @media (min-width: @tablet-width) {
@@ -309,6 +309,8 @@
 }
 
 .user-photo__button {
+  cursor: pointer;
+
   &--post {
     font: inherit;
     color: @contacts-link-color;

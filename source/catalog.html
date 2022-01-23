@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Пинк</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="/source/img/favicons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/source/img/favicons/apple.png">
@@ -40,7 +40,7 @@
             <a class="site-list__link" href="index.html">Главная</a>
           </li>
           <li class="site-list__item">
-            <a class="site-list__link site-list__link--current" href="">Фотографии</a>
+            <a class="site-list__link site-list__link--current">Фотографии</a>
           </li>
           <li class="site-list__item">
             <a class="site-list__link" href="form.html">Конкурс</a>
@@ -262,27 +262,31 @@
             </div>
             <form class="user-photo__form" action="https://echo.htmlacademy.ru" method="post">
               <div class="user-photo__tools-container">
-                <label class="user-photo__icon user-photo__icon--crop user-photo__icon--current" for="crop">
-                  <span class="visually-hidden">Кроп</span>
-                  <svg class="user-photo__img user-photo__img--crop user-photo__img--current" viewbox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <use href="img/sprite.svg#crop-icon"></use>
-                  </svg>
-                </label>
-                <input class="user-photo__tool user-photo__tool--crop user-photo__tool--current" type="range" name="crop" id="crop" min="0" max="100" value="85">
-                <label class="user-photo__icon user-photo__icon--fill" for="fill">
-                  <span class="visually-hidden">Филл</span>
-                  <svg class="user-photo__img user-photo__img--fill" viewbox="0 0 48 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <use href="img/sprite.svg#fill-icon"></use>
-                  </svg>
-                </label>
-                <input class="user-photo__tool user-photo__tool--fill" type="range" name="fill" id="fill" min="0" max="100" value="13">
-                <label class="user-photo__icon user-photo__icon--contrast" for="contrast">
-                  <span class="visually-hidden">Контраст</span>
-                  <svg class="user-photo__img user-photo__img--contrast" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <use href="img/sprite.svg#contrast-icon"></use>
-                  </svg>
-                </label>
-                <input class="user-photo__tool user-photo__tool--contrast" type="range" name="contrast" id="contrast" min="0" max="100" value="50">
+                <div class="user-photo__icons-container">
+                  <label class="user-photo__icon user-photo__icon--crop user-photo__icon--current" for="crop" tabindex="0">
+                    <span class="visually-hidden">Кроп</span>
+                    <svg class="user-photo__img user-photo__img--crop user-photo__img--current" viewbox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <use href="img/sprite.svg#crop-icon"></use>
+                    </svg>
+                  </label>
+                  <label class="user-photo__icon user-photo__icon--fill" for="fill" tabindex="0">
+                    <span class="visually-hidden">Филл</span>
+                    <svg class="user-photo__img user-photo__img--fill" viewbox="0 0 48 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <use href="img/sprite.svg#fill-icon"></use>
+                    </svg>
+                  </label>
+                  <label class="user-photo__icon user-photo__icon--contrast" for="contrast" tabindex="0">
+                    <span class="visually-hidden">Контраст</span>
+                    <svg class="user-photo__img user-photo__img--contrast" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <use href="img/sprite.svg#contrast-icon"></use>
+                    </svg>
+                  </label>
+                </div>
+                <div class="user-photo__tools-wrapper">
+                  <input class="user-photo__tool user-photo__tool--crop user-photo__tool--current" type="range" name="crop" id="crop" min="0" max="100" value="85">
+                  <input class="user-photo__tool user-photo__tool--fill" type="range" name="fill" id="fill" min="0" max="100" value="13">
+                  <input class="user-photo__tool user-photo__tool--contrast" type="range" name="contrast" id="contrast" min="0" max="100" value="50">
+                </div>
               </div>
               <p class="user-photo__buttons">
                 <button class="user-photo__button user-photo__button--post" type="submit">Запостить</button>
@@ -295,7 +299,7 @@
       <footer class="page-footer">
         <a class="page-footer__logo" href="">
           <svg class="page-footer__logo-img page-footer__logo-img--mobile" width="74" height="23" xmlns="http://www.w3.org/2000/svg">
-            <use href="img/sprite.svg#logo-footer-mobile"></use>
+            <use href="img/sprite.svg#logo-mobile"></use>
           </svg>
           <svg class="page-footer__logo-img page-footer__logo-img--desktop" width="147" height="40" xmlns="http://www.w3.org/2000/svg">
             <use href="img/sprite.svg#logo-footer-desktop"></use>

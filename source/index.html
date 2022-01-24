@@ -10,6 +10,12 @@
     <link rel="apple-touch-icon" href="/source/img/favicons/apple.png">
     <link rel="manifest" href="manifest.webmanifest">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+    <link rel="preload" href="fonts/opensans.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensans.woff" type="font/woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensansbold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensansbold.woff" type="font/woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensanslight.woff2" type="font/woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensanslight.woff" type="font/woff" as="font" crossorigin="anonymous">
   </head>
   <body class="page__body">
       <header class="page-header">
@@ -78,7 +84,7 @@
                 </a>
               </li>
               <li class="markets-list__item">
-                <a class="markets-list__link markets-list__link--microsoft"href="https://www.microsoft.com/ru-ru/store/apps/windows">
+                <a class="markets-list__link markets-list__link--microsoft" href="https://www.microsoft.com/ru-ru/store/apps/windows">
                   <svg class="markets-list__link-img" width="44" height="41" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <use href="img/sprite.svg#microsoft-icon"></use>
                   </svg>
@@ -166,20 +172,20 @@
                   <th class="tariffs-list__dummy">
                   </th>
                   <th class="tariffs-list__header">
-                    <h3 class="tariffs-list__name">БАЗА</h3>
+                    <span class="tariffs-list__name">БАЗА</span>
                     <p class="tariffs-list__price">1,99 USD</p>
                   </th>
                   <th class="tariffs-list__header tariffs-list__header--hit">
-                    <h3 class="tariffs-list__name">СТАНДАРТ</h3>
+                    <span class="tariffs-list__name">СТАНДАРТ</span>
                     <p class="tariffs-list__price">3,99 USD</p>
                   </th>
                   <th class="tariffs-list__header">
-                    <h3 class="tariffs-list__name">АНЛИМ</h3>
+                    <span class="tariffs-list__name">АНЛИМ</span>
                     <p class="tariffs-list__price">9,99 USD</p>
                   </th>
                 </tr>
                 <tr class="tariffs-list__row">
-                  <td class="tariffs-list__filters--big-screen">Розовый фильтр</td>
+                  <td class="tariffs-list__filters-big-screen">Розовый фильтр</td>
                   <td class="tariffs-list__filters tariffs-list__filters--positive">
                     <span class="tariffs-list__filters-content">Розовый фильтр</span>
                   </td>
@@ -191,7 +197,7 @@
                   </td>
                 </tr>
                 <tr class="tariffs-list__row">
-                  <td class="tariffs-list__filters--big-screen">Смайлики</td>
+                  <td class="tariffs-list__filters-big-screen">Смайлики</td>
                   <td class="tariffs-list__filters tariffs-list__filters--negative">
                     <span class="tariffs-list__filters-content">Смайлики</span>
                   </td>
@@ -203,7 +209,7 @@
                   </td>
                 </tr>
                 <tr class="tariffs-list__row">
-                  <td class="tariffs-list__filters--big-screen">Комментарии</td>
+                  <td class="tariffs-list__filters-big-screen">Комментарии</td>
                   <td class="tariffs-list__filters tariffs-list__filters--negative">
                     <span class="tariffs-list__filters-content">Комментарии</span>
                   </td>

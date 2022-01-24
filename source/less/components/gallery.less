@@ -31,9 +31,9 @@
 }
 
 .gallery__item {
-  display: flex;
+  display: flex;;
   flex-direction: column;
-  margin-bottom: 20px;
+  margin-bottom: 21px;
 
   @media (min-width: @tablet-width) {
     margin: 0;
@@ -46,51 +46,63 @@
   }
 }
 
+.gallery__panorama-of-day {
+  margin-bottom: 23px;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 50px;
+  }
+}
+
 .gallery__item:last-child {
   margin-bottom: 0;
 }
 
-.gallery__link:not(.gallery__link--panorama-of-day) {
-  margin: 0 20px 0 20px;
-
-  @media (min-width: @tablet-width) {
-    margin: 0;
-    width: 300px;
-  }
-}
-
-.gallery__link--panorama-of-day {
-  margin: 0;
-  position: relative;
-
-  @media (min-width: @tablet-width) {
-    margin: 0 -20px;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin: 0 -130px;
-  }
-
-  &::after {
-    content: "ПАНОРАМА ДНЯ";
-    position: absolute;
-    width: 140px;
-    height: 36px;
-    top: 0;
-    right: 20px;
-    background-color: @contacts-link-color;
-    color: @contrast-font-color;
-    font-size: 12px;
-    line-height: 36px;
-    font-weight: 700;
+.gallery__link {
+  &:not(.gallery__link--panorama-of-day) {
+    margin: 0 20px 0 20px;
 
     @media (min-width: @tablet-width) {
-      top: 57px;
+      margin: 0;
+      width: 300px;
+    }
+  }
+
+  &--panorama-of-day {
+    margin: 0;
+    position: relative;
+    display: block;
+
+    @media (min-width: @tablet-width) {
+      margin: 0 -20px;
     }
 
     @media (min-width: @desktop-width) {
-      top: 54px;
-      right: 130px;
+      margin: 0 -130px;
+    }
+
+    &::after {
+      content: "ПАНОРАМА ДНЯ";
+      position: absolute;
+      width: 140px;
+      height: 36px;
+      top: 0;
+      right: 20px;
+      background-color: @contacts-link-color;
+      color: @contrast-font-color;
+      font-size: 12px;
+      line-height: 36px;
+      font-weight: 700;
+
+      @media (min-width: @tablet-width) {
+        top: 57px;
+      }
+
+      @media (min-width: @desktop-width) {
+        top: 54px;
+        right: 130px;
+      }
     }
   }
 }
@@ -159,11 +171,15 @@
     @media (min-width: @tablet-width) {
       min-height: 121px;
       margin-bottom: 30px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 620px;
     }
 
     @media (min-width: @desktop-width) {
       min-height: 96px;
       margin-bottom: 0;
+      width: 940px;
     }
   }
 }
@@ -216,6 +232,7 @@
   padding: 0;
   border: none;
   cursor: pointer;
+  background-color: inherit;
 
   @media (min-width: @tablet-width) {
     order: 2;

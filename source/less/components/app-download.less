@@ -1,56 +1,67 @@
 .app-download {
   min-height: 670px;
-  background-image: url("../img/app-download-background/app-download-background-mobile.jpg");
   background-color: #1d2631;
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  background-position: top;
   color: @contrast-font-color;
-  padding-left: 20px;
-  padding-right: 20px;
   padding-bottom: 32px;
   display: flex;
   flex-direction: column;
 
-  @media (min-resolution: 2dppx) {
-    background-image: url("../img/app-download-background/app-download-background-mobile@2x.jpg");
-  }
-
   @media (min-width: @tablet-width) {
     min-height: 697px;
-    background-image: url("../img/app-download-background/app-download-background-tablet.jpg");
+    background-image: url("../img/app-download-background/hand-tablet.png"), url("../img/app-download-background/app-download-background-tablet.jpg");
     justify-content: center;
     align-items: flex-start;
-    background-size: cover;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 660px auto, cover;
+    background-position: bottom center, center;
+    padding-left: 20px;
+    padding-right: 20px;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/app-download-background/app-download-background-tablet@2x.jpg");
+      background-image: url("../img/app-download-background/hand-tablet@2x.png"), url("../img/app-download-background/app-download-background-tablet@2x.jpg");
     }
   }
 
   @media (min-width: @desktop-width) {
     min-height: 853px;
-    background-image: url("../img/app-download-background/app-download-background-desktop.jpg");
+    background-image: url("../img/app-download-background/hand-desktop.png"), url("../img/app-download-background/app-download-background-desktop.jpg");
     padding-left: 130px;
     padding-right: 130px;
     box-sizing: border-box;
     justify-content: start;
+    background-size: 1050px auto, cover;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/app-download-background/app-download-background-desktop@2x.jpg");
+      background-image: url("../img/app-download-background/hand-desktop@2x.png"), url("../img/app-download-background/app-download-background-desktop@2x.jpg");
     }
   }
 }
 
 .app-download__slogan-container {
-  margin-top: 90px;
-  margin-bottom: 341px;
+  padding-top: 90px;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 462px;
+  box-sizing: border-box;
+  background-image: url("../img/app-download-background/hand-mobile.png"), url("../img/app-download-background/app-download-background-mobile.jpg");
+  background-size: 320px auto, 100% auto;
+  background-repeat: no-repeat, no-repeat;
+  background-position: bottom center, top;
+  margin-bottom: 28px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/app-download-background/hand-mobile@2x.png"), url("../img/app-download-background/app-download-background-mobile@2x.jpg");
+  }
 
   @media (min-width: @tablet-width) {
+    box-sizing: content-box;
+    height: auto;
     width: 200px;
     padding-left: 50px;
-    margin-bottom: 28px;
+    padding-right: 0;
+    padding-top: 0;
     margin-top: 127px;
+    background-image: none;
   }
 
   @media (min-width: @desktop-width) {
@@ -82,9 +93,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 20px;
 
   @media (min-width: @tablet-width) {
     width: 300px;
+    padding: 0;
   }
 }
 

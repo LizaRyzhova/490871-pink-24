@@ -33,11 +33,15 @@
   border: 2px solid #e5e5e5;
   border-radius: 50%;
   top: 0;
-  left: 12px;
+  left: 0;
   box-sizing: border-box;
   width: 37px;
   height: 37px;
   background-color: @main-bg-color;
+
+  @media (min-width: @tablet-width) {
+    left: 12px;
+  }
 }
 
 .user-apps-list__label:hover .user-apps-list__mark {

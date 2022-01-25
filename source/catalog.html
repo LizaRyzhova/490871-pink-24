@@ -10,6 +10,12 @@
     <link rel="apple-touch-icon" href="/source/img/favicons/apple.png">
     <link rel="manifest" href="manifest.webmanifest">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+    <link rel="preload" href="fonts/opensans.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensans.woff" type="font/woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensansbold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensansbold.woff" type="font/woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensanslight.woff2" type="font/woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensanslight.woff" type="font/woff" as="font" crossorigin="anonymous">
   </head>
   <body class="page__body">
     <header class="page-header">
@@ -60,40 +66,40 @@
         </div>
         <section class="page-main__gallery gallery">
           <h2 class="visually-hidden">Галерея фотографий</h2>
-          <ul class="gallery__list">
-            <li class="gallery__item gallery__item--panorama-of-day">
-              <a class="gallery__link gallery__link--panorama-of-day" href="#">
-                <picture>
-                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/panorama-desktop.webp 1x, img/catalog/panorama-desktop@2x.webp 2x">
-                  <source type="image/webp" media="(min-width: 660px)" srcset="img/catalog/panorama-tablet.webp 1x, img/catalog/panorama-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/catalog/panorama-mobile.webp 1x, img/catalog/panorama-mobile@2x.webp 2x">
+          <div class="gallery__panorama-of-day">
+            <a class="gallery__link gallery__link--panorama-of-day" href="#">
+              <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/panorama-desktop.webp 1x, img/catalog/panorama-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/catalog/panorama-tablet.webp 1x, img/catalog/panorama-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/catalog/panorama-mobile.webp 1x, img/catalog/panorama-mobile@2x.webp 2x">
 
-                  <source media="(min-width: 1200px)" srcset="img/catalog/panorama-desktop.jpg 1x, img/catalog/panorama-desktop@2x.jpg 2x">
-                  <source media="(min-width: 660px)" srcset="img/catalog/panorama-tablet.jpg 1x, img/catalog/panorama-tablet@2x.jpg 2x">
-                  <img class="gallery__image gallery__image--panorama-of-day" src="../img/catalog/panorama-mobile.jpg" srcset="img/catalog/panorama-mobile@2x.jpg 2x" alt="Мост над оврагом.">
-                </picture>
-              </a>
-              <div class="gallery__container gallery__container--panorama-of-day">
-                  <p class="gallery__info gallery__info--panorama-of-day">
-                    <span class="gallery__author-name">Анна</span> (<span class="gallery__meta-time">5 МИНУТ</span> НАЗАД)
-                  </p>
-                  <p class="gallery__content">Прыгать или нет? Напишите в
-                    комментарии свой совет и <br class="line-break">
-                    смотрите прямую трансляцию в
-                    перископе, задавайте свои вопросы!
-                  </p>
-                <div class="gallery__likes-container gallery__likes-container--panorama-of-day">
-                  <button class="gallery__like-button like-button">
-                    <svg class="gallery__like-img" width="13" height="12" xmlns="http://www.w3.org/2000/svg">
-                      <use href="img/sprite.svg#like-icon"></use>
-                    </svg>
-                  </button>
-                  <p class="gallery__likes gallery__likes--panorama-of-day">
-                    Нравится: <span class="gallery__likes-number">215</span>
-                  </p>
-                </div>
+                <source media="(min-width: 1200px)" srcset="img/catalog/panorama-desktop.jpg 1x, img/catalog/panorama-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/catalog/panorama-tablet.jpg 1x, img/catalog/panorama-tablet@2x.jpg 2x">
+                <img class="gallery__image gallery__image--panorama-of-day" src="../img/catalog/panorama-mobile.jpg" srcset="img/catalog/panorama-mobile@2x.jpg 2x" alt="Мост над оврагом.">
+              </picture>
+            </a>
+            <div class="gallery__container gallery__container--panorama-of-day">
+                <p class="gallery__info gallery__info--panorama-of-day">
+                  <span class="gallery__author-name">Анна</span> (<span class="gallery__meta-time">5 МИНУТ</span> НАЗАД)
+                </p>
+                <p class="gallery__content">Прыгать или нет? Напишите в
+                  комментарии свой совет и <br class="line-break">
+                  смотрите прямую трансляцию в
+                  перископе, задавайте свои вопросы!
+                </p>
+              <div class="gallery__likes-container gallery__likes-container--panorama-of-day">
+                <button class="gallery__like-button like-button">
+                  <svg class="gallery__like-img" width="13" height="12" xmlns="http://www.w3.org/2000/svg">
+                    <use href="img/sprite.svg#like-icon"></use>
+                  </svg>
+                </button>
+                <p class="gallery__likes gallery__likes--panorama-of-day">
+                  Нравится: <span class="gallery__likes-number">215</span>
+                </p>
               </div>
-            </li>
+            </div>
+          </div>
+          <ul class="gallery__list">
             <li class="gallery__item">
               <a class="gallery__link" href="#">
                 <picture>

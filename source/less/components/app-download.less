@@ -4,6 +4,7 @@
   color: @contrast-font-color;
   padding-bottom: 32px;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
 
   @media (min-width: @tablet-width) {
@@ -13,7 +14,7 @@
     align-items: flex-start;
     background-repeat: no-repeat, no-repeat;
     background-size: 660px auto, cover;
-    background-position: bottom center, center;
+    background-position: bottom left 96%, center;
     padding-left: 20px;
     padding-right: 20px;
 
@@ -91,6 +92,7 @@
 
 .app-download__container {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
   padding: 0 20px;

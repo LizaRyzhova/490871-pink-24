@@ -5,7 +5,7 @@
 }
 
 .user-photo__slogan {
-  margin: 47px 20px 40px 20px;
+  margin: 44px 20px 40px 20px;
 
   @media (min-width: @tablet-width) {
     margin: 65px 20px 69px 20px;
@@ -57,7 +57,7 @@
 
   @media (min-width: @desktop-width) {
     width: 410px;
-    padding-left: 90px;
+    padding-left: 76px;
     padding-right: 0;
   }
 }
@@ -72,12 +72,24 @@
     display: flex;
     justify-content: right;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 17px;
+    margin-right: 15px;
+  }
+}
+
+.user-photo__tools-wrapper {
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
 }
 
 .user-photo__icons-container {
   display: flex;
   justify-content: space-around;
-  margin-bottom: 38px;
+  width: 95%;
+  margin-bottom: 25px;
 
   @media (min-width: @tablet-width) {
     margin: 0;
@@ -87,7 +99,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-right: 44px;
+    margin-right: 35px;
   }
 }
 
@@ -100,6 +112,20 @@
 
   @media (min-width: @tablet-width) {
     height: auto;
+
+    &--crop {
+      margin-top: -9px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--crop {
+      margin-top: -20px;
+    }
+
+    &--contrast {
+      margin-bottom: -11px;
+    }
   }
 }
 
@@ -169,10 +195,6 @@
   }
 }
 
-.user-photo__tools-wrapper {
-  padding: 11px 0 7px;
-}
-
 .user-photo__tool {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -180,6 +202,7 @@
   display: none;
   width: 100%;
   position: relative;
+  background-color: inherit;
 
   @media (min-width: @tablet-width) {
     display: block;
@@ -271,7 +294,7 @@
 .user-photo__buttons {
   display: flex;
   flex-direction: column;
-  padding-top: 36px;
+  padding-top: 29px;
   margin: 0;
 
   @media (min-width: @tablet-width) {
@@ -282,7 +305,8 @@
   @media (min-width: @desktop-width) {
     flex-direction: row;
     justify-content: space-between;
-    margin-right: -30px;
+    margin-left: 17px;
+    margin-right: -17px;
   }
 }
 

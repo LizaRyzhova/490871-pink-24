@@ -32,6 +32,11 @@ const html = () => {
     .pipe(gulp.dest('build'));
 }
 
+const copyManifest = () => {
+  return gulp.src('source/manifest.webmanifest')
+    .pipe(gulp.dest('build'))
+}
+
 const scripts = () => {
   return gulp.src('source/js/script.js')
     .pipe(gulp.dest('build/js'))
@@ -117,6 +122,7 @@ export const build = gulp.series(
   gulp.parallel(
     styles,
     html,
+    copyManifest,
     scripts,
     svg,
     sprite,
@@ -132,6 +138,7 @@ export default gulp.series(
   gulp.parallel(
     styles,
     html,
+    copyManifest,
     scripts,
     svg,
     sprite,
